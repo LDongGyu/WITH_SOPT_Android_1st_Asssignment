@@ -19,20 +19,6 @@ class SignInActivity : AppCompatActivity() {
         val signIn_btn: Button = findViewById(R.id.signin_btn)
         val signUp_btn: Button = findViewById(R.id.signup_btn)
 
-        signIn_btn.setOnClickListener {
-            val intent: Intent = Intent(this, MainActivity::class.java)
-
-            val id: String = id_edit.text.toString()
-            val pass: String = pass_edit.text.toString()
-
-            if( !id.isEmpty() && !pass.isEmpty()) {
-                intent.putExtra("id", id)
-                intent.putExtra("pass", pass)
-                startActivity(intent)
-                finish()
-            }
-        }
-
         signUp_btn.setOnClickListener{
             val intent: Intent = Intent(this, SignUpActivity::class.java)
 
